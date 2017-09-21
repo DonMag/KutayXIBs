@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTripDetailViewController">
+            <connections>
+                <outlet property="tripDetailView" destination="dZs-Gv-W4f" id="isb-o2-d6W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEw-tT-Fa1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Gv-W4f" customClass="MyTripDetailView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="620" id="FnF-UW-3WT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dZs-Gv-W4f" secondAttribute="trailing" id="9Tm-NM-gHP"/>
+                        <constraint firstItem="dZs-Gv-W4f" firstAttribute="leading" secondItem="NEw-tT-Fa1" secondAttribute="leading" id="Ht2-Aa-vVo"/>
+                        <constraint firstItem="dZs-Gv-W4f" firstAttribute="width" secondItem="NEw-tT-Fa1" secondAttribute="width" id="Lqf-5C-dO0"/>
+                        <constraint firstItem="dZs-Gv-W4f" firstAttribute="top" secondItem="NEw-tT-Fa1" secondAttribute="top" id="ZDd-SO-ldS"/>
+                        <constraint firstAttribute="bottom" secondItem="dZs-Gv-W4f" secondAttribute="bottom" id="i49-T6-Ilr"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NEw-tT-Fa1" secondAttribute="trailing" id="PlQ-Pz-43L"/>
+                <constraint firstAttribute="bottom" secondItem="NEw-tT-Fa1" secondAttribute="bottom" id="dFS-ll-BXQ"/>
+                <constraint firstItem="NEw-tT-Fa1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sic-s3-K8Y"/>
+                <constraint firstItem="NEw-tT-Fa1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xlf-AE-lmy"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

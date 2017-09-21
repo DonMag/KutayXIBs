@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetailView">
+            <connections>
+                <outlet property="dateView" destination="4X0-Tz-IHr" id="DVa-e8-umb"/>
+                <outlet property="estimatedFeeView" destination="Bmz-3E-oow" id="PvG-Tx-Ttg"/>
+                <outlet property="goodsDetailView" destination="obd-mY-yTs" id="Mbb-Nr-kbN"/>
+                <outlet property="helperCountView" destination="hum-E3-9K3" id="3Ua-xT-BJc"/>
+                <outlet property="insuranceView" destination="O8L-Om-vTX" id="iRU-jo-Z9J"/>
+                <outlet property="paymentMethodView" destination="DUV-ZC-7Xk" id="ttu-2f-NK6"/>
+                <outlet property="promotionCodeView" destination="NLZ-ec-dSf" id="1vx-FW-49x"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip_detail_background" translatesAutoresizingMaskIntoConstraints="NO" id="qn0-uK-N38">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lO-iA-Wkx" userLabel="Status View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip_detail_status_background" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-Hz-DXF">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip_detail_status_icon" translatesAutoresizingMaskIntoConstraints="NO" id="U6B-e7-ZIh">
+                            <rect key="frame" x="30" y="6.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="0R5-Qx-GFy"/>
+                                <constraint firstAttribute="height" constant="15" id="NxY-9e-H1b"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebrikler, Octovan Mini talebiniz onaylandı." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-bd-Gdj">
+                            <rect key="frame" x="58" y="7.5" width="317" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hJc-bd-Gdj" firstAttribute="top" secondItem="U6B-e7-ZIh" secondAttribute="top" constant="1" id="AlX-6P-KeG"/>
+                        <constraint firstItem="hQ6-Hz-DXF" firstAttribute="top" secondItem="7lO-iA-Wkx" secondAttribute="top" id="CC2-ha-4xg"/>
+                        <constraint firstItem="U6B-e7-ZIh" firstAttribute="leading" secondItem="7lO-iA-Wkx" secondAttribute="leading" constant="30" id="Cz6-Ar-u2E"/>
+                        <constraint firstAttribute="trailing" secondItem="hQ6-Hz-DXF" secondAttribute="trailing" id="Dg0-Cc-VFm"/>
+                        <constraint firstItem="hQ6-Hz-DXF" firstAttribute="leading" secondItem="7lO-iA-Wkx" secondAttribute="leading" id="MLJ-Bv-elD"/>
+                        <constraint firstItem="U6B-e7-ZIh" firstAttribute="centerY" secondItem="7lO-iA-Wkx" secondAttribute="centerY" id="S5e-Vl-jCH"/>
+                        <constraint firstItem="hJc-bd-Gdj" firstAttribute="leading" secondItem="U6B-e7-ZIh" secondAttribute="trailing" constant="13" id="idT-56-IPj"/>
+                        <constraint firstItem="hQ6-Hz-DXF" firstAttribute="trailing" secondItem="hJc-bd-Gdj" secondAttribute="trailing" id="syq-2d-L7e"/>
+                        <constraint firstAttribute="bottom" secondItem="hQ6-Hz-DXF" secondAttribute="bottom" id="vdi-lq-UKe"/>
+                        <constraint firstAttribute="height" constant="28" id="ycv-Lx-Ohw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2t-vz-lgG" userLabel="Location View">
+                    <rect key="frame" x="0.0" y="33" width="375" height="151"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demands_locations_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QzV-k7-xV2">
+                            <rect key="frame" x="40" y="26" width="10" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="3Xw-5x-BSo"/>
+                                <constraint firstAttribute="height" constant="80" id="5m6-Mx-yc3"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Başlangıç Lokasyonu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTa-c2-HTT">
+                            <rect key="frame" x="84" y="26" width="143" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kolektif House Levent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-Zn-cNb">
+                            <rect key="frame" x="84" y="45" width="291" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Varış Lokasyonu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4J-xu-yl3">
+                            <rect key="frame" x="84" y="88" width="111" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İş Bankası Kuleleri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-q1-XPD">
+                            <rect key="frame" x="84" y="107" width="291" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="TuX-q1-XPD" firstAttribute="leading" secondItem="iTa-c2-HTT" secondAttribute="leading" id="Bch-wm-kji"/>
+                        <constraint firstItem="QzV-k7-xV2" firstAttribute="centerY" secondItem="n2t-vz-lgG" secondAttribute="centerY" constant="-10" id="DJk-gX-Dmr"/>
+                        <constraint firstItem="eC6-Zn-cNb" firstAttribute="leading" secondItem="iTa-c2-HTT" secondAttribute="leading" id="Mei-EF-dDC"/>
+                        <constraint firstItem="TuX-q1-XPD" firstAttribute="trailing" secondItem="eC6-Zn-cNb" secondAttribute="trailing" id="OrE-XJ-aqw"/>
+                        <constraint firstItem="iTa-c2-HTT" firstAttribute="top" secondItem="QzV-k7-xV2" secondAttribute="top" id="Tjb-V2-yoP"/>
+                        <constraint firstItem="TuX-q1-XPD" firstAttribute="top" secondItem="p4J-xu-yl3" secondAttribute="bottom" constant="1" id="XEe-GC-qWc"/>
+                        <constraint firstAttribute="height" constant="151" id="ejw-yV-drz"/>
+                        <constraint firstAttribute="trailing" secondItem="eC6-Zn-cNb" secondAttribute="trailing" id="lKL-Li-9jz"/>
+                        <constraint firstItem="p4J-xu-yl3" firstAttribute="bottom" secondItem="QzV-k7-xV2" secondAttribute="bottom" id="vNY-CH-g6q"/>
+                        <constraint firstItem="p4J-xu-yl3" firstAttribute="leading" secondItem="QzV-k7-xV2" secondAttribute="trailing" constant="34" id="vUw-Ba-Ue9"/>
+                        <constraint firstItem="p4J-xu-yl3" firstAttribute="leading" secondItem="iTa-c2-HTT" secondAttribute="leading" id="vl4-Ob-6Rs"/>
+                        <constraint firstItem="eC6-Zn-cNb" firstAttribute="top" secondItem="iTa-c2-HTT" secondAttribute="bottom" constant="1" id="zDt-ep-hMl"/>
+                        <constraint firstItem="QzV-k7-xV2" firstAttribute="leading" secondItem="n2t-vz-lgG" secondAttribute="leading" constant="40" id="zPL-yp-onH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X0-Tz-IHr" userLabel="Date View" customClass="UpdatableDetailHorizontalView">
+                    <rect key="frame" x="0.0" y="184" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ORr-lB-4kU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-0Y-3fR" userLabel="First Update View">
+                    <rect key="frame" x="0.0" y="234" width="375" height="90"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip_detail_line" translatesAutoresizingMaskIntoConstraints="NO" id="9og-aV-VQC">
+                            <rect key="frame" x="187" y="0.0" width="1" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Cmm-zm-kRr"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmz-3E-oow" customClass="StaticDetailVerticalView">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="upperLabelFontSize">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lowerLabelFontSize">
+                                    <real key="value" value="17"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lowerLabelText" value="TAHMİNİ ÜCRET"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLZ-ec-dSf" customClass="StaticDetailVerticalView">
+                            <rect key="frame" x="188" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="upperLabelFontSize">
+                                    <real key="value" value="17"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lowerLabelFontSize">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lowerLabelText" value="PROMOSYON KODU"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="upperLabelText" value="-"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NLZ-ec-dSf" secondAttribute="bottom" id="2SQ-pf-iMq"/>
+                        <constraint firstItem="9og-aV-VQC" firstAttribute="leading" secondItem="Bmz-3E-oow" secondAttribute="trailing" id="2w0-6b-cbp"/>
+                        <constraint firstAttribute="trailing" secondItem="NLZ-ec-dSf" secondAttribute="trailing" id="8dQ-33-yUl"/>
+                        <constraint firstItem="9og-aV-VQC" firstAttribute="centerX" secondItem="SKW-0Y-3fR" secondAttribute="centerX" id="SMj-3j-cIW"/>
+                        <constraint firstItem="Bmz-3E-oow" firstAttribute="leading" secondItem="SKW-0Y-3fR" secondAttribute="leading" id="eD8-Tp-hQG"/>
+                        <constraint firstItem="NLZ-ec-dSf" firstAttribute="top" secondItem="SKW-0Y-3fR" secondAttribute="top" id="fxC-tM-twb"/>
+                        <constraint firstItem="NLZ-ec-dSf" firstAttribute="leading" secondItem="9og-aV-VQC" secondAttribute="trailing" id="gxk-XR-SdU"/>
+                        <constraint firstItem="9og-aV-VQC" firstAttribute="height" secondItem="SKW-0Y-3fR" secondAttribute="height" id="huZ-da-WWu"/>
+                        <constraint firstItem="9og-aV-VQC" firstAttribute="centerY" secondItem="SKW-0Y-3fR" secondAttribute="centerY" id="iyi-mi-GpA"/>
+                        <constraint firstAttribute="height" constant="90" id="m3w-Oa-gfs"/>
+                        <constraint firstItem="Bmz-3E-oow" firstAttribute="top" secondItem="SKW-0Y-3fR" secondAttribute="top" id="pMf-PT-SCm"/>
+                        <constraint firstAttribute="bottom" secondItem="Bmz-3E-oow" secondAttribute="bottom" id="tci-PK-96j"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUV-ZC-7Xk" userLabel="Payment Method View" customClass="UpdatableDetailHorizontalView">
+                    <rect key="frame" x="0.0" y="324" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="do9-rX-J3I"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="trip_detail_mastercard_icon"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="imageHeight">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-sa-BTE" userLabel="Second Update View">
+                    <rect key="frame" x="0.0" y="374" width="375" height="90"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip_detail_line" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-iT-SNZ">
+                            <rect key="frame" x="187" y="0.0" width="1" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="m5M-32-bx2"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hum-E3-9K3" customClass="UpdatableDetailVerticalView">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="informationLabelText" value="TAŞIMA HİZMETİ"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8L-Om-vTX" customClass="UpdatableDetailVerticalView">
+                            <rect key="frame" x="188" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="informationLabelText" value="TAŞIMA HİZMETİ"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="O8L-Om-vTX" secondAttribute="bottom" id="0GM-CM-2yK"/>
+                        <constraint firstAttribute="height" constant="90" id="9uB-Rm-qb2"/>
+                        <constraint firstItem="O8L-Om-vTX" firstAttribute="top" secondItem="l1x-sa-BTE" secondAttribute="top" id="JzA-Kd-4Bm"/>
+                        <constraint firstItem="xk7-iT-SNZ" firstAttribute="centerY" secondItem="l1x-sa-BTE" secondAttribute="centerY" id="Pt1-Fu-r2s"/>
+                        <constraint firstAttribute="trailing" secondItem="O8L-Om-vTX" secondAttribute="trailing" id="RLM-Zx-Hyl"/>
+                        <constraint firstItem="xk7-iT-SNZ" firstAttribute="centerX" secondItem="l1x-sa-BTE" secondAttribute="centerX" id="iGe-Tz-1A8"/>
+                        <constraint firstItem="O8L-Om-vTX" firstAttribute="leading" secondItem="xk7-iT-SNZ" secondAttribute="trailing" id="l3U-RP-8uE"/>
+                        <constraint firstAttribute="bottom" secondItem="hum-E3-9K3" secondAttribute="bottom" id="pRr-qF-C5D"/>
+                        <constraint firstItem="hum-E3-9K3" firstAttribute="top" secondItem="l1x-sa-BTE" secondAttribute="top" id="pST-gL-Vvq"/>
+                        <constraint firstItem="xk7-iT-SNZ" firstAttribute="leading" secondItem="hum-E3-9K3" secondAttribute="trailing" id="pmr-Zu-YBT"/>
+                        <constraint firstItem="hum-E3-9K3" firstAttribute="leading" secondItem="l1x-sa-BTE" secondAttribute="leading" id="pph-kZ-td2"/>
+                        <constraint firstItem="xk7-iT-SNZ" firstAttribute="height" secondItem="l1x-sa-BTE" secondAttribute="height" id="wOW-19-1Sm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obd-mY-yTs" userLabel="Goods Detail View" customClass="UpdatableDetailHorizontalView">
+                    <rect key="frame" x="0.0" y="464" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eic-N1-Del"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="trip_detail_goods_icon"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Detaylar"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="imageHeight">
+                            <real key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlp-dq-ZPV" userLabel="Detail Action View">
+                    <rect key="frame" x="0.0" y="514" width="375" height="106"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 saatten az kalan rezervasyon iptallerinde açılış ücreti alınmaktadır." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRE-s0-dZ7">
+                            <rect key="frame" x="0.0" y="11.5" width="375" height="31.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <color key="textColor" red="0.6705882353" green="0.6705882353" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-Td-eE4">
+                            <rect key="frame" x="8" y="48" width="359" height="50"/>
+                            <color key="backgroundColor" red="0.91372549020000005" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="FWn-al-iGO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <state key="normal" title="İPTAL ET">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="uRE-s0-dZ7" firstAttribute="leading" secondItem="wlp-dq-ZPV" secondAttribute="leading" id="2Xt-5G-Kc9"/>
+                        <constraint firstItem="Ssh-Td-eE4" firstAttribute="centerX" secondItem="uRE-s0-dZ7" secondAttribute="centerX" id="Jd7-G6-Mbl"/>
+                        <constraint firstItem="Ssh-Td-eE4" firstAttribute="top" secondItem="uRE-s0-dZ7" secondAttribute="bottom" constant="5" id="Rzc-5u-jzE"/>
+                        <constraint firstAttribute="bottom" secondItem="Ssh-Td-eE4" secondAttribute="bottom" constant="8" id="T5f-0J-kf0"/>
+                        <constraint firstAttribute="height" constant="106" id="aOG-dY-sgV"/>
+                        <constraint firstAttribute="trailing" secondItem="Ssh-Td-eE4" secondAttribute="trailing" constant="8" id="bWE-vq-CyX"/>
+                        <constraint firstItem="Ssh-Td-eE4" firstAttribute="leading" secondItem="wlp-dq-ZPV" secondAttribute="leading" constant="8" id="qdG-iT-XUj"/>
+                        <constraint firstAttribute="trailing" secondItem="uRE-s0-dZ7" secondAttribute="trailing" id="z77-Al-NLC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qn0-uK-N38" secondAttribute="bottom" id="02I-5t-wgY"/>
+                <constraint firstAttribute="trailing" secondItem="qn0-uK-N38" secondAttribute="trailing" id="1lf-IK-f7T"/>
+                <constraint firstAttribute="trailing" secondItem="DUV-ZC-7Xk" secondAttribute="trailing" id="2Zc-J0-F59"/>
+                <constraint firstItem="l1x-sa-BTE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="34M-sS-XjX"/>
+                <constraint firstAttribute="trailing" secondItem="l1x-sa-BTE" secondAttribute="trailing" id="3Y6-Kx-sbG"/>
+                <constraint firstItem="n2t-vz-lgG" firstAttribute="top" secondItem="7lO-iA-Wkx" secondAttribute="bottom" constant="5" id="4Uz-O3-kb6"/>
+                <constraint firstItem="4X0-Tz-IHr" firstAttribute="top" secondItem="n2t-vz-lgG" secondAttribute="bottom" id="5yi-iv-DkL"/>
+                <constraint firstItem="SKW-0Y-3fR" firstAttribute="top" secondItem="4X0-Tz-IHr" secondAttribute="bottom" id="7Jf-hg-i11"/>
+                <constraint firstAttribute="trailing" secondItem="wlp-dq-ZPV" secondAttribute="trailing" id="9Uo-Zi-dLZ"/>
+                <constraint firstAttribute="trailing" secondItem="7lO-iA-Wkx" secondAttribute="trailing" id="9VH-K6-nCH"/>
+                <constraint firstAttribute="trailing" secondItem="obd-mY-yTs" secondAttribute="trailing" id="CDq-tA-VQV"/>
+                <constraint firstAttribute="trailing" secondItem="4X0-Tz-IHr" secondAttribute="trailing" id="Cn4-pJ-KrJ"/>
+                <constraint firstItem="obd-mY-yTs" firstAttribute="top" secondItem="l1x-sa-BTE" secondAttribute="bottom" id="K1N-Ku-se3"/>
+                <constraint firstItem="wlp-dq-ZPV" firstAttribute="top" secondItem="obd-mY-yTs" secondAttribute="bottom" id="KWu-ED-Ebj"/>
+                <constraint firstItem="SKW-0Y-3fR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NKq-Nf-Ort"/>
+                <constraint firstItem="l1x-sa-BTE" firstAttribute="top" secondItem="DUV-ZC-7Xk" secondAttribute="bottom" id="SAX-GA-aek"/>
+                <constraint firstItem="obd-mY-yTs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UG4-fj-ZPD"/>
+                <constraint firstItem="7lO-iA-Wkx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vxk-gW-la2"/>
+                <constraint firstItem="DUV-ZC-7Xk" firstAttribute="top" secondItem="SKW-0Y-3fR" secondAttribute="bottom" id="bfg-gb-NLe"/>
+                <constraint firstItem="n2t-vz-lgG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cXb-gd-Ok3"/>
+                <constraint firstAttribute="trailing" secondItem="n2t-vz-lgG" secondAttribute="trailing" id="e8C-TQ-ToR"/>
+                <constraint firstAttribute="trailing" secondItem="SKW-0Y-3fR" secondAttribute="trailing" id="eIP-Ie-K9I"/>
+                <constraint firstAttribute="bottom" secondItem="wlp-dq-ZPV" secondAttribute="bottom" id="gof-95-EaF"/>
+                <constraint firstItem="DUV-ZC-7Xk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n4t-b6-Y3t"/>
+                <constraint firstItem="7lO-iA-Wkx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o9l-3P-ecP"/>
+                <constraint firstItem="4X0-Tz-IHr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="on2-6P-90k"/>
+                <constraint firstItem="qn0-uK-N38" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rQm-pC-bd7"/>
+                <constraint firstItem="wlp-dq-ZPV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rfb-Fp-39Y"/>
+                <constraint firstItem="qn0-uK-N38" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vLt-EQ-8KH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="demands_locations_icon" width="30" height="216"/>
+        <image name="trip_detail_background" width="1080" height="1920"/>
+        <image name="trip_detail_goods_icon" width="48" height="48"/>
+        <image name="trip_detail_line" width="3" height="228"/>
+        <image name="trip_detail_mastercard_icon" width="92" height="57"/>
+        <image name="trip_detail_status_background" width="1080" height="91"/>
+        <image name="trip_detail_status_icon" width="40" height="40"/>
+    </resources>
+</document>

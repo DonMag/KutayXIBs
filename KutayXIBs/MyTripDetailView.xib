@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTripDetailView">
+            <connections>
+                <outlet property="estimatedFeeView" destination="dfT-vh-jhJ" id="TXj-rs-HnJ"/>
+                <outlet property="promotionCodeView" destination="DKt-F7-afh" id="XQt-Li-LBT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZI-Cm-Ipf">
+                    <rect key="frame" x="0.0" y="150" width="375" height="90"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-8b-dWd">
+                            <rect key="frame" x="187" y="0.0" width="1" height="90"/>
+                            <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="VKS-aw-EXE"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-vh-jhJ" customClass="StaticDetailVerticalView">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKt-F7-afh" customClass="StaticDetailVerticalView">
+                            <rect key="frame" x="188" y="0.0" width="187" height="90"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="upperLabelFontSize">
+                                    <real key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lowerLabelFontSize">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="upperLabelText" value="Set in IB (30)"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lowerLabelText" value="Using IBInspectable (10)"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="fuc-8b-dWd" firstAttribute="height" secondItem="cZI-Cm-Ipf" secondAttribute="height" id="2ye-4W-9h7"/>
+                        <constraint firstItem="dfT-vh-jhJ" firstAttribute="leading" secondItem="cZI-Cm-Ipf" secondAttribute="leading" id="4bb-LT-4vy"/>
+                        <constraint firstItem="fuc-8b-dWd" firstAttribute="leading" secondItem="dfT-vh-jhJ" secondAttribute="trailing" id="4dV-GB-8NV"/>
+                        <constraint firstAttribute="bottom" secondItem="DKt-F7-afh" secondAttribute="bottom" id="VbU-6y-1XC"/>
+                        <constraint firstAttribute="trailing" secondItem="DKt-F7-afh" secondAttribute="trailing" id="cES-aU-CaO"/>
+                        <constraint firstAttribute="bottom" secondItem="dfT-vh-jhJ" secondAttribute="bottom" id="cUP-Bx-tZY"/>
+                        <constraint firstItem="fuc-8b-dWd" firstAttribute="centerY" secondItem="cZI-Cm-Ipf" secondAttribute="centerY" id="e6F-gA-imB"/>
+                        <constraint firstItem="fuc-8b-dWd" firstAttribute="centerX" secondItem="cZI-Cm-Ipf" secondAttribute="centerX" id="eP1-2I-J5f"/>
+                        <constraint firstItem="DKt-F7-afh" firstAttribute="top" secondItem="cZI-Cm-Ipf" secondAttribute="top" id="eXR-wT-igX"/>
+                        <constraint firstItem="dfT-vh-jhJ" firstAttribute="top" secondItem="cZI-Cm-Ipf" secondAttribute="top" id="eaf-mf-4Rp"/>
+                        <constraint firstAttribute="height" constant="90" id="jnO-5s-sRY"/>
+                        <constraint firstItem="DKt-F7-afh" firstAttribute="leading" secondItem="fuc-8b-dWd" secondAttribute="trailing" id="rEZ-o7-chI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cZI-Cm-Ipf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cDU-XH-Tsd"/>
+                <constraint firstItem="cZI-Cm-Ipf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="150" id="dUb-gZ-8N5"/>
+                <constraint firstAttribute="trailing" secondItem="cZI-Cm-Ipf" secondAttribute="trailing" id="pnp-f5-cCV"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
